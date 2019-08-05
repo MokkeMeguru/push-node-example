@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Getting Started</title>
+        <script src="https://unpkg.com/lodash@4.16.6"></script>
+    </head>
+    <body>
+        
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.7/push.min.js"></script>
+        <script src="main.js"></script>
+        <script type="text/javascript">
+
+         Push.create('タスクの通知\nManabaの出席');
+         Push.create("Hello world!", {
+             body: "How's it hangin'?",
+             icon: '/icon.png',
+             timeout: 4000,
+             onClick: function () {
+                 window.focus();
+                 this.close();
+             }
+         });
+        </script>
+    </body>
+</html>
